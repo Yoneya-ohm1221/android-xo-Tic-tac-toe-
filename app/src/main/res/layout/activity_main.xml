@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/item_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,9 +26,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/back"
-            android:text="X"
             android:textSize="60sp"
-            android:textStyle="bold"
+            android:textStyle="normal|bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,9 +37,8 @@
             android:layout_height="110dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/a3"
             app:layout_constraintStart_toEndOf="@+id/a1"
             app:layout_constraintTop_toTopOf="parent" />
@@ -51,9 +50,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/back"
-            android:text="O"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,9 +61,8 @@
             android:layout_height="110dp"
             android:layout_marginStart="16dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/a1" />
 
@@ -74,9 +71,8 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/b3"
             app:layout_constraintStart_toEndOf="@+id/b1"
             app:layout_constraintTop_toBottomOf="@+id/a2" />
@@ -87,9 +83,8 @@
             android:layout_height="110dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/a3" />
 
@@ -99,9 +94,8 @@
             android:layout_height="110dp"
             android:layout_marginStart="16dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/b1" />
 
@@ -111,9 +105,8 @@
             android:layout_height="110dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/c3"
             app:layout_constraintStart_toEndOf="@+id/c1"
@@ -125,10 +118,88 @@
             android:layout_height="110dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/back"
-            android:text="x"
-            android:textStyle="bold"
             android:textSize="60sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/b3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="42dp"
+        android:text="score X: 50"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="60dp"
+        android:text="score O: 50"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="tic tac toe"
+        android:textColor="@color/logo"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/back"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/txtOsc"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toEndOf="@+id/txtXsc"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtXsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="15dp"
+        android:text="X"
+        android:textColor="@color/yourturn"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtOsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="15dp"
+        android:text="O"
+        android:textColor="@color/noturn"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
